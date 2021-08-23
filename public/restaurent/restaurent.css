@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    scroll-behavior: smooth !important;
+}
+.panelHeading{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+}
+.panelHeading h3{
+    border-bottom: 3px dotted orange;
+    width: 300px;
+
+}
+.mynavbar{
+    background-color: #FEB945;
+}
+.nav-link{
+    font-family: cursive !important;
+    /* color: white !important; */
+}
+
+/* /////CARD STYLING START///// */
+.cards{
+    /* border:1px solid grey; */
+    max-width: 200px !important ;
+    margin: 10px 0;
+    padding: 4px;
+    box-shadow: 2px 2px 5px lightgray;
+}
+.cardDes{
+    padding: 8px;
+    background-color: #0F2027;
+    color: white;
+}
+.cardDes small{
+    display: block;
+}
+.cardDes h5{
+    margin: 0 !important;
+    border-bottom: 1px solid white;
+    }
+.cardDes strong {
+    color: green;
+}
+.cardDes button{
+    width: 120px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #cac531;
+    font-family: cursive;
+
+}
+/* /////CARD STYLING END///// */
+.myProilfe {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+}
+.myProilfe .aboutUs{
+    width:450px;    
+    margin: 10px ;
+    font-size: medium;
+    font-weight: bold;
+    font-family:cursive;
+}
+.aboutUs h5{
+    border-bottom: 2px solid #FEB945;
+}
+.personalDetails{
+    width:350px;
+    /* border: 2px solid lightgray;     */
+    margin: 10px ;
+    padding:10px;
+    box-shadow: 2px 2px 5px lightgray;
+    background-color: #0F2027;
+    border-radius: 8px;
+    
+}
+.proLogo{
+    display: flex;
+    justify-content: center;
+    
+
+}
+.personalDetails li{
+    list-style: none;
+    width:100%;
+    margin:10px 0;
+    border-bottom:1px solid black;
+    padding:8px;
+    font-family: cursive;
+    color: white;
+}
+.personalDetails li b{
+    color: green;
+}
+
+
+
+.productDet{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: gray;
+    width:100%;
+
+    }
+
+.productDet input{
+    width: 80%;
+    margin: 10px;
+    height: 40px;
+    outline: none;
+    margin: 10px 0;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    font-family: cursive;
+}
+.productDet input::placeholder{
+    color: white;
+}
+.productDet select{
+    width: 80%;
+    margin: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    color: white;
+    font-family: cursive;
+    padding: 8px;
+    outline: none;
+}
+.productDet select option{
+    background-color: black;
+}
+
+.radioBtnDiv{
+    width: 80%;
+    font-family: cursive;
+    margin: 10px 0;
+}
+.radioBtnDiv input{
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 !important;
+}
+.radioBtnDiv label{
+    margin: 0 !important;
+    font-family: cursive;
+    
+
+}
+.productDet button{
+     width: 150px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #cac531;
+    font-family: cursive;
+}
+
+
+
+
+/* /////CUSTOMER STYLING START/// */
+.customerDetails .randimg{
+    border: 1px solid grey;
+    width: 300px;
+    margin: 10px ;
+}
+.custDetBox img{
+    display: block;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 50%;
+    
+}
+
+.custDetBox{
+    color: white;
+    margin: 10px;
+    width: 300px;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #0F2027;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.custDetBox li{
+ 
+     list-style: none;
+    width:100%;
+    margin:10px 0;
+    border-bottom:1px solid black;
+    padding:8px;
+}
+
+
+/* ///tab// */
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #cac531 !important;
+    color: black !important;
+}
+.signBTN{
+    border: 1px solid white;
+    border-radius:5px;
+    padding:5px !important;
+    font-size: small !important;
+}
+.signBTN:hover{
+    background-color: #FEB945;
+    color: black !important;
+    cursor: pointer;
+}

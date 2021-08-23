@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Product</title>
+    <link rel="stylesheet" href="restaurent.css" />
+    <!-- <link rel="stylesheet" href="../css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://kit.fontawesome.com/96487a3712.js" crossorigin="anonymous"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBuLTvz84Jn8kw0TmVCkTRK1zwFgbMV9eY",
+        authDomain: "hackaton-web.firebaseapp.com",
+        databaseURL: "https://hackaton-web-default-rtdb.firebaseio.com",
+        projectId: "hackaton-web",
+        storageBucket: "hackaton-web.appspot.com",
+        messagingSenderId: "964594185474",
+        appId: "1:964594185474:web:f55a62243eb2d9b0de3e1b",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  </head>
+  <body onload="getProdInDB()">
+    <!-- ///MY NAVBAR START  -->
+
+    <section class="myNavbar bg-dark">
+      <section class="navbar navbar-expand-md">
+        <a href="#" class="navbar-brand">
+          <img src="../img/logo.png" width="80" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon fas fa-bars text-light"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+
+        
+        <nav class="navbar-nav ml-auto d-flex align-items-center">
+          <li class="nav-item">
+            <a href="adminPanel.html" class="nav-link text-white">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="myProduct.html" class="nav-link text-white">MY PRODUCT</a>
+          </li>
+          <li class="nav-item">
+            <a href="adminPanel.html#perDivTarget" class="nav-link text-white">MY PROFILE</a>
+          </li>
+          <li class="nav-item">
+            <a  onclick="signout()" class="nav-link text-white signBTN">LOGOUT</a>
+          </li>
+        </nav>
+      </div>
+      </section>
+    </section>
+
+    <!-- ///MY NAVBAR END  -->
+
+    <!-- /////POSTER START///// -->
+    <section>
+        <img src="img/eaters-collective-i_xVfNtQjwI-unsplash.jpg" width="100%" alt="">
+    </section>
+
+    <!-- /////POSTER END///// -->
+
+
+
+    <!-- //////ADD PRODUCT START///// -->
+    <section>
+      <section class="panelHeading mt-5">
+        <h3>ADD PRODUCT...</h3>
+      </section>
+      <section class="productDet mt-5 mb-5 pb-5">
+        <input type="text" id="itemName" placeholder="Item Name" />
+
+        <input type="text" id="itemPrice" placeholder="Item Price" />
+
+        <select id="cateOpt">
+          <option value="select your option" disabled selected>select your option</option>
+          <option value="Pakistani">Pakistani</option>
+          <option value="Fast Food">Fast Food</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Indian">Indian</option>
+          <option value="Others">Others</option>
+      </select>
+        
+          <!-- ////radio btn// -->
+          
+          <input type="file" placeholder="Item Food Image" />
+          
+          <div class="radioBtnDiv">
+            Delivery: 
+          <label for="dFree"><input type="radio" id="dFree" value="free" name="deliveryMethod"> Free</label>         
+          <label for="dPaid"><input type="radio" id="dPaid" value="paid" name="deliveryMethod"> PAID</label>         
+          </div>
+       
+
+
+        <button onclick="addProduct()">ADD PRODUCT</button>
+      </section>
+    </section>
+
+
+
+    <!-- //////ADD PRODUCT END///// -->
+
+    <!-- //////MY PRODUCT START///// -->
+
+    <section>
+      <section class="panelHeading mt-5">
+        <h3>MY PRODUCT...</h3>
+      </section>
+
+      <section class="container mb-5">
+        <div class="row d-flex justify-content-center align-items-center" id="prodShow">
+          <!-- <section
+            class="
+              d-flex
+              justify-content-center
+              align-items-center
+              col-md-3 col-sm-6
+              p-0
+            "
+          >
+            <section class="cards">
+              <div class="cardImage">
+                <img src="../img/product1.jpg" width="100%" alt="" />
+              </div>
+              <div class="cardDes">
+                <h5>BURGER 1</h5>
+                <small>Rs:25000</small>
+                <small>Restaurent Name : Meo</small>
+                <small>category: <strong>fast food</strong></small>
+                <p>DELIVERY: <strong>FREE</strong></p>
+              </div>
+            </section>
+          </section>
+          <section
+          class="
+            d-flex
+            justify-content-center
+            align-items-center
+            col-md-3 col-sm-6
+            p-0
+          "
+        >
+          <section class="cards">
+            <div class="cardImage">
+              <img src="../img/product1.jpg" width="100%" alt="" />
+            </div>
+            <div class="cardDes">
+              <h5>BURGER 1</h5>
+              <small>Rs:25000</small>
+              <small>Restaurent Name : Meo</small>
+              <small>category: <strong>fast food</strong></small>
+              <p>DELIVERY: <strong>FREE</strong></p>
+            </div>
+          </section>
+        </section>
+        <section
+        class="
+          d-flex
+          justify-content-center
+          align-items-center
+          col-md-3 col-sm-6
+          p-0
+        "
+      >
+        <section class="cards">
+          <div class="cardImage">
+            <img src="../img/product1.jpg" width="100%" alt="" />
+          </div>
+          <div class="cardDes">
+            <h5>BURGER 1</h5>
+            <small>Rs:25000</small>
+            <small>Restaurent Name : Meo</small>
+            <small>category: <strong>fast food</strong></small>
+            <p>DELIVERY: <strong>FREE</strong></p>
+          </div>
+        </section>
+      </section>
+      <section
+      class="
+        d-flex
+        justify-content-center
+        align-items-center
+        col-md-3 col-sm-6
+        p-0
+      "
+    >
+      <section class="cards">
+        <div class="cardImage">
+          <img src="../img/product1.jpg" width="100%" alt="" />
+        </div>
+        <div class="cardDes">
+          <h5>BURGER 1</h5>
+          <small>Rs:25000</small>
+          <small>Restaurent Name : Meo</small>
+          <small>category: <strong>fast food</strong></small>
+          <p>DELIVERY: <strong>FREE</strong></p>
+        </div>
+      </section>
+    </section> -->
+        </div>
+      </section>
+    </section>
+
+    <!-- //////MY PRODUCT END///// -->
+
+    
+    <section class="footer bg-dark p-3">
+      <small class="text-white">&copy;CopyRight All right Reserved</small>
+  </section>
+
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+  <script src="../app.js"></script>
+</html>

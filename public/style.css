@@ -1,0 +1,237 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+/* ////HOME PAGE Start///// */
+.mainBox{
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("img/inwall.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+
+    
+}
+.solo{
+    font-family: cursive;
+    font-size:medium ;
+    color: white;
+}
+.homepPage{
+    width: 350px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient( to top , #0F2027 , #203A43, #2C5364);
+
+    margin: 0 30px;
+    border-radius: 5px;
+}
+.homepPage section{
+    /* height: 150px;
+    border: 1px solid blue; */
+    margin: 60px 10px;
+}
+.homeBtn button{
+    width: 120px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #cac531;
+    font-family: cursive;
+}
+/* ////HOME PAGE END///// */
+
+
+
+
+/* ////////SIGN UP STYLING START//// */
+.signUpBox{
+    width: 100%;
+    min-height: 100vh;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #FEB945; */
+    /* background-image: linear-gradient(to right ,#141E30 , ); */
+    background-image: url("./img/upwall.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.upBox{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 5px lightgray;
+    width: 400px;
+    padding: 8px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0 15px;
+    border-radius: 8px;
+    /* background-color:wheat ; */
+    background-image: linear-gradient( to bottom left , #0F2027 , #203A43, #2C5364);
+
+  
+
+}
+.upBox h3{
+    border-bottom: 2px dotted white;
+    padding-bottom:2px ;
+    color: white;
+    font-family: cursive;
+ }
+.upBox input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    margin: 10px 0;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    font-family: cursive;
+    color: white;
+
+}
+.upBox input:disabled{
+    background-color: lightgray;
+}
+.radioBTNBOx small
+{
+    font-family: cursive;
+    color: white;
+}
+.radioBTNBOx label{
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: cursive;
+    color: white;
+}
+.radioBTNBOx small{
+    display: block;
+}
+.radioBtn{
+    border: 1px solid black !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.upBox button{
+    width: 120px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #cac531;
+    font-family: cursive;
+    
+}
+.errorAlert{
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    visibility: collapse;
+    transition: all 0.6s ease;
+    background-color: lightgreen;
+}
+.errorAlertShow{
+    opacity: 1;
+    top: 30px;
+    transition: all 0.6s ease;
+    visibility: visible;
+
+}
+
+.alreadyDiv{
+    /* border: 1px solid black; */
+    margin: 10px 0;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+/* ////////SIGN UP STYLING END//// */
+
+
+
+
+/* //////LOGIN AND SIGN IN STYLING START//////  */
+.loginMainBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    /* background-image: linear-gradient(to right , #606c88,#3f4c6b); */
+    /* border: 2px solid red; */
+    /* background-color: #FEB945; */
+    background-image: url("./img/inwall.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.logInBox{
+    /* border: 2px solid brown; */
+    border-radius: 8px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient( to bottom left , #0F2027 , #203A43, #2C5364);
+
+    /* background-color: wheat; */
+    padding: 20px 10px;
+}
+.wordingIn{
+    text-align: center;
+    font-family: cursive;
+    color: white;
+}
+.signInBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+.signInBox input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    margin: 10px 0;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    font-family: cursive;
+    color: white;
+}
+.signInBox button{
+    width: 120px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #cac531;
+    font-family: cursive;
+}
+/* //////LOGIN AND SIGN IN STYLING END//////  */
